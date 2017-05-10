@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_medium">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_Dp"
+            android:layout_width="@dimen/dpdimen"
+            android:layout_height="@dimen/dpdimen"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/index"/>
+
+        <com.skeleton.util.customview.MaterialEditText
+            android:id="@+id/etName"
+            style="@style/et_design"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:hint="@string/name"
+            android:inputType="textPersonName"/>
+
+        <com.skeleton.util.customview.MaterialEditText
+            android:id="@+id/etPhoneNum"
+            style="@style/et_design"
+            android:hint="@string/phone_number"
+            android:inputType="phone"/>
+
+        <com.skeleton.util.customview.MaterialEditText
+            android:id="@+id/etEmail"
+            style="@style/et_design"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"/>
+
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingEnd="@dimen/spacing_large"
+                android:text="@string/select_gender"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold"/>
+
+            <RadioButton
+                android:id="@+id/rbtnMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male"/>
+
+
+            <RadioButton
+                android:id="@+id/rbtnFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female"/>
+
+        </RadioGroup>
+
+        <com.skeleton.util.customview.MaterialEditText
+            android:id="@+id/etDOB"
+            style="@style/et_design"
+            android:hint="@string/date_of_birth"
+            android:inputType="textEmailAddress"/>
+
+        <com.skeleton.util.customview.MaterialEditText
+            android:id="@+id/etPassword"
+            style="@style/et_design"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
+
+        <com.skeleton.util.customview.MaterialEditText
+            android:id="@+id/etConfirmPassword"
+            style="@style/et_design"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"/>
+
+        <CheckBox
+            android:id="@+id/cbTOS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/spacing_small"
+            android:text="@string/tos"/>
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

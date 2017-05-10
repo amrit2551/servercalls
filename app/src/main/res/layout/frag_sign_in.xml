@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/spacing_xlarge">
+    <com.skeleton.util.customview.MaterialEditText
+        android:id="@+id/etEmail"
+        style="@style/et_design"
+        android:hint="@string/email_phone_num"
+        android:inputType="textEmailAddress"/>
+
+    <com.skeleton.util.customview.MaterialEditText
+        android:id="@+id/etPassword"
+        style="@style/et_design"
+        android:hint="@string/password"
+        android:inputType="textPassword"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:text="@string/remember_me"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:text="@string/forgot_password"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:background="@drawable/button_shape"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/brnFBSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:background="@drawable/button_shape2"
+        android:text="@string/sign_up_with_fb"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
