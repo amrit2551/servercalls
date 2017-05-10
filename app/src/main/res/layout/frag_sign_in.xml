@@ -40,7 +40,7 @@
         android:textColor="@color/white"/>
 
     <Button
-        android:id="@+id/brnFBSignIn"
+        android:id="@+id/btnFbSignIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_small"

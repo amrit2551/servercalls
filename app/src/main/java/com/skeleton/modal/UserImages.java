@@ -2,35 +2,66 @@ package com.skeleton.modal;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * classuser images
+ */
 public class UserImages {
-    @SerializedName("_id")
-    private String _id;
+    @SerializedName("id")
+    private String id;
     @SerializedName("thumbnail")
     private String thumbnail;
     @SerializedName("original")
     private String original;
 
-    public String get_id() {
-        return _id;
+    /**
+     *
+     * @return id from server
+     */
+    public String getId() {
+        return id;
     }
 
-    public void set_id(String _id) {
-        this._id = _id;
+    /**
+     *
+     * @param id sets id
+     */
+
+    public void setId(final String id) {
+        this.id = id;
     }
+    /**
+     *
+     * @return get thumbnail of user image
+     */
 
     public String getThumbnail() {
         return thumbnail;
     }
 
-    public void setThumbnail(String thumbnail) {
+    /**
+     *
+     * @param thumbnail set thumbnail
+     */
+
+    public void setThumbnail(final String thumbnail) {
         this.thumbnail = thumbnail;
     }
+
+    /**
+     *
+     * @return get org image of user
+     */
 
     public String getOriginal() {
         return original;
     }
 
-    public void setOriginal(String original) {
+    /**
+     *
+     * @param original org image of user
+     */
+
+    public void setOriginal(final String original) {
         this.original = original;
     }
 }

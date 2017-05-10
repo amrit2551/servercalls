@@ -8,8 +8,8 @@ import java.util.List;
  * user detail
  */
 public class UserDetails {
-    @SerializedName("_id")
-    private String _id;
+    @SerializedName("id")
+    private String id;
     @SerializedName("createdAt")
     private String createdAt;
     @SerializedName("updatedAt")
@@ -32,83 +32,161 @@ public class UserDetails {
      */
     private List<UserImages> userImages;
 
-    public String get_id() {
-        return _id;
+    /**
+     * @return user id
+     */
+    public String getId() {
+        return id;
     }
 
-    public void set_id(String _id) {
-        this._id = _id;
+    /**
+     * @param id set user id
+     */
+
+    public void setId(final String id) {
+        this.id = id;
     }
+
+    /**
+     * @return time of creating user profile
+     */
 
     public String getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(String createdAt) {
+    /**
+     * @param createdAt sets time of creating profile by user
+     */
+
+    public void setCreatedAt(final String createdAt) {
         this.createdAt = createdAt;
     }
+
+    /**
+     * @return last update to profile
+     */
 
     public String getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(String updatedAt) {
+    /**
+     * @param updatedAt sets last update info
+     */
+
+    public void setUpdatedAt(final String updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    /**
+     * @return gives dob of user
+     */
 
     public String getDob() {
         return dob;
     }
 
-    public void setDob(String dob) {
+    /**
+     * @param dob sets user dob
+     */
+
+    public void setDob(final String dob) {
         this.dob = dob;
     }
+
+    /**
+     * @return gets country code of user
+     */
 
     public String getCountryCode() {
         return countryCode;
     }
 
-    public void setCountryCode(String countryCode) {
+    /**
+     * @param countryCode sets country code of user
+     */
+
+    public void setCountryCode(final String countryCode) {
         this.countryCode = countryCode;
     }
+
+    /**
+     * @return gives ph no
+     */
 
     public String getPhoneNo() {
         return phoneNo;
     }
 
-    public void setPhoneNo(String phoneNo) {
+    /**
+     * @param phoneNo sets user ph no
+     */
+
+    public void setPhoneNo(final String phoneNo) {
         this.phoneNo = phoneNo;
     }
+
+    /**
+     * @return user email
+     */
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    /**
+     * @param email sets user email
+     */
+    public void setEmail(final String email) {
         this.email = email;
     }
+
+    /**
+     * @return orientation of profile
+     */
 
     public String getOrientation() {
         return orientation;
     }
 
-    public void setOrientation(String orientation) {
+    /**
+     * @param orientation sets prof orientation
+     */
+
+    public void setOrientation(final String orientation) {
         this.orientation = orientation;
     }
+
+    /**
+     * @return user number
+     */
 
     public String getNewNumber() {
         return newNumber;
     }
 
-    public void setNewNumber(String newNumber) {
+    /**
+     * @param newNumber sets user no
+     */
+
+    public void setNewNumber(final String newNumber) {
         this.newNumber = newNumber;
     }
+
+    /**
+     * @return user image list
+     */
 
     public List<UserImages> getUserImages() {
         return userImages;
     }
 
-    public void setUserImages(List<UserImages> userImages) {
+    /**
+     * @param userImages lists user images
+     */
+
+    public void setUserImages(final List<UserImages> userImages) {
         this.userImages = userImages;
     }
 }

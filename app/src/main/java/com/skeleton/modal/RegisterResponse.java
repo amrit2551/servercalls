@@ -14,27 +14,56 @@ public class RegisterResponse {
     @SerializedName("data")
     private Data data;
 
+    /**
+     *
+     * @return status code(int) value
+     */
     public int getStatusCode() {
         return statusCode;
     }
 
-    public void setStatusCode(int statusCode) {
+    /**
+     *
+     * @param statusCode sets status code
+     */
+    public void setStatusCode(final int statusCode) {
         this.statusCode = statusCode;
     }
+
+    /**
+     *
+     * @return gets message from server
+     */
+
 
     public String getMessage() {
         return message;
     }
 
-    public void setMessage(String message) {
+    /**
+     *
+     * @param message sets message
+     */
+
+    public void setMessage(final String message) {
         this.message = message;
     }
+
+    /**
+     *
+     * @return data from server
+     */
 
     public Data getData() {
         return data;
     }
 
-    public void setData(Data data) {
+    /**
+     *
+     * @param data set data from server
+     */
+
+    public void setData(final Data data) {
         this.data = data;
     }
 }
