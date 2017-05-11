@@ -2,6 +2,7 @@ package com.skeleton.retrofit;
 
 
 import com.skeleton.modal.PostData;
+import com.skeleton.modal.RegisterResponse;
 import com.skeleton.modal.UserInfo;
 
 import java.util.HashMap;
@@ -12,10 +13,13 @@ import retrofit2.Call;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PartMap;
 import retrofit2.http.Query;
+
+import static com.skeleton.constant.ApiKeyConstant.AUTHORIZATION;
 
 /**
  * Developer: Saurabh Verma
@@ -42,7 +46,7 @@ public interface ApiInterface {
      */
     @Multipart
     @POST(REGISTER)
-    Call<MultipartParams> register(@PartMap HashMap<String, RequestBody> map);
+    Call<RegisterResponse> register(@PartMap HashMap<String, RequestBody> map);
 //
 /**
  * call for user signup
@@ -89,11 +93,12 @@ public interface ApiInterface {
      * Update location call.
      *
      * @param map the map
+     *            @param authorization authenticate
      * @return the call
      */
     @FormUrlEncoded
     @POST(LOGIN)
-    Call<CommonParams> login(@FieldMap HashMap<String, String> map);
+    Call<RegisterResponse> login(@Header(AUTHORIZATION) String authorization, @FieldMap HashMap<String, String> map);
 
     /**
      * @return user

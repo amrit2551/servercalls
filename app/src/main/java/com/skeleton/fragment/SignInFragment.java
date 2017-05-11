@@ -9,10 +9,12 @@ import android.widget.Button;
 
 
 import com.skeleton.R;
+import com.skeleton.modal.RegisterResponse;
 import com.skeleton.retrofit.APIError;
 import com.skeleton.retrofit.CommonParams;
 import com.skeleton.retrofit.ResponseResolver;
 import com.skeleton.retrofit.RestClient;
+import com.skeleton.util.Log;
 import com.skeleton.util.ValidateEditText;
 import com.skeleton.util.customview.MaterialEditText;
 
@@ -75,22 +77,27 @@ public class SignInFragment extends BaseFragment {
                 .add("flushPreviousSessions", true)
                 .add("appVersion", 1)
                 .build();
-        RestClient.getApiInterface().login(params.getMap()).enqueue(new ResponseResolver<CommonParams>(getActivity(), true, true) {
-            @Override
-            public void success(final CommonParams commonParams) {
+        RestClient.getApiInterface().login(null, params.getMap()).enqueue(new ResponseResolver<RegisterResponse>(getContext(), true, true) {
 
+            @Override
+            public void success(final RegisterResponse registerResponse) {
+                Log.i("app" , "success");
             }
 
             @Override
             public void failure(final APIError error) {
-
+                Log.i("app", "fail");
             }
         });
     }
 
-    /**
-     * @return boolean value
-     */
+
+
+
+                /**
+                 * @return boolean value
+                 */
+
     private boolean validateinfo() {
         if (!(ValidateEditText.checkEmail(editTextEmail))) {
             return false;

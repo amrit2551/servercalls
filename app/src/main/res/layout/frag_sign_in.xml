@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_small"
         android:background="@drawable/button_shape"
-        android:text="@string/sign_up"
+        android:text="@string/Sign_in"
         android:textColor="@color/white"/>
 
     <Button

@@ -4,6 +4,7 @@
     <string name="msg_not_connected_to_internet">Not connected to Internet</string>
 
     <string name="log_fcm_message_id">"FCM Message Id: "</string>
+    <string name="Sign_in">sign_in</string>
     <string name="log_fcm_notification_message">"FCM Notification Message: "</string>
     <string name="log_fcm_data">"FCM Data Message: "</string>
     <string name="log_fcm_data_message">"FCM Data Message:(TA)G "</string>

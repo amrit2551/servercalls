@@ -17,10 +17,12 @@ import android.widget.RadioGroup;
 import com.bumptech.glide.Glide;
 import com.kbeanie.multipicker.api.entity.ChosenImage;
 import com.skeleton.R;
+import com.skeleton.modal.RegisterResponse;
 import com.skeleton.retrofit.APIError;
 import com.skeleton.retrofit.MultipartParams;
 import com.skeleton.retrofit.ResponseResolver;
 import com.skeleton.retrofit.RestClient;
+import com.skeleton.util.Log;
 import com.skeleton.util.ValidateEditText;
 import com.skeleton.util.customview.MaterialEditText;
 import com.skeleton.util.imagepicker.ImageChooser;
@@ -78,7 +80,6 @@ public class SignUpFragment extends BaseFragment {
     }
 
     /**
-     *
      * @param view inflated view
      */
     private void init(final View view) {
@@ -102,7 +103,6 @@ public class SignUpFragment extends BaseFragment {
     }
 
     /**
-     *
      * @param v view
      */
     public void onClick(final View v) {
@@ -121,7 +121,6 @@ public class SignUpFragment extends BaseFragment {
     }
 
     /**
-     *
      * @return boolean
      */
     private boolean validateData() {
@@ -160,19 +159,20 @@ public class SignUpFragment extends BaseFragment {
                 .add("language", "EN")
                 .add("deviceType", "ANDROID")
                 .addFile("profilePic", imagefile).build();
-        RestClient.getApiInterface().register(params.getMap()).enqueue(new ResponseResolver<MultipartParams>(getActivity(), true, true) {
-
+        RestClient.getApiInterface().register(params.getMap()).enqueue(new ResponseResolver<RegisterResponse>(getContext(), true) {
             @Override
-            public void success(final MultipartParams multipartParams) {
-
+            public void success(final RegisterResponse registerResponse) {
+                Log.i("app", "success");
             }
 
             @Override
             public void failure(final APIError error) {
-
+                Log.i("app", "fail");
             }
+
         });
     }
+
 
     /**
      * choose image
