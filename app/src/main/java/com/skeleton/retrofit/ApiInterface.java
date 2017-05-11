@@ -7,17 +7,15 @@ import com.skeleton.modal.UserInfo;
 import java.util.HashMap;
 import java.util.List;
 
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.PartMap;
 import retrofit2.http.Query;
-
-import static com.skeleton.constant.ApiKeyConstant.AUTHORIZATION;
-import static com.skeleton.retrofit.ApiInterface.POST_HIT;
-import static com.skeleton.retrofit.ApiInterface.USER_INFO;
 
 /**
  * Developer: Saurabh Verma
@@ -32,15 +30,25 @@ public interface ApiInterface {
     String LOGIN = "api/user/login";
 
 
-//    /**
+    //    /**
 //     * @param map
 //     * @return
 //     */
-//    @Multipart
-//    @POST("api/v1/user/createUser")
-//    Call<LoginResponse> register(@PartMap HashMap<String, RequestBody> map);
+
+    /**
+     *
+     * @param map the map
+     * @return the call
+     */
+    @Multipart
+    @POST(REGISTER)
+    Call<MultipartParams> register(@PartMap HashMap<String, RequestBody> map);
 //
-//
+/**
+ * call for user signup
+ *
+ */
+
 //    /**
 //     * @param map
 //     * @return
@@ -80,14 +88,12 @@ public interface ApiInterface {
     /**
      * Update location call.
      *
-     * @param authorization the authorization
-     * @param map           the map
+     * @param map the map
      * @return the call
      */
     @FormUrlEncoded
-    @POST(UPDATE_LOCATION)
-    Call<CommonParams> updateLocation(@Header(AUTHORIZATION) String authorization,
-                                      @FieldMap HashMap<String, String> map);
+    @POST(LOGIN)
+    Call<CommonParams> login(@FieldMap HashMap<String, String> map);
 
     /**
      * @return user
@@ -96,7 +102,6 @@ public interface ApiInterface {
     Call<List<UserInfo>> getData();
 
     /**
-     *
      * @param userId userid
      * @return integer val
      */
