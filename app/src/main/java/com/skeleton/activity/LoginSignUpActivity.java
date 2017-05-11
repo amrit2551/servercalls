@@ -28,6 +28,8 @@ public class LoginSignUpActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         init();
+//        tabLayout.addTab(tabLayout.newTab().setText("sign_up"));
+//        tabLayout.addTab(tabLayout.newTab().setText("sign_in"));
         PagerAdapter pagerAdapter = new com.skeleton.adapter.PagerAdapter(getSupportFragmentManager(), fList);
         viewPager.setAdapter(pagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
